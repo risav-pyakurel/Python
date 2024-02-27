@@ -2,7 +2,7 @@
 
 
 class Car:
-  def __init__(self, brand,model): #constructor __init__
+  def __init__(self, brand,model): 
     self.brand = brand
     self.model = model
 
@@ -10,7 +10,7 @@ class Car:
     return f"{self.brand} {self.model}"
     
 
-class Electriccar(Car):
+class Electriccar(Car): #inheritance
   def __init__(self,brand, model , battery_size):
     super().__init__(brand, model)
     self.battery_size = battery_size
