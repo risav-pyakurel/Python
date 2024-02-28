@@ -22,7 +22,8 @@ def list_all_videos(videos):
 def add_video(videos):
   name=input("name of the video : ")
   time=input("enter video time : ")
-  videos.append
+  videos.append({'name': name, 'time': time})
+  save_data_helper(videos)
 
 def update_video(videos):
   pass
@@ -43,7 +44,8 @@ def main():
     print("3. update a youtube video detail ")
     print("4. Delete a youtube video ")
     print("5. Exit the app")
-    choice= input("Enter your choice")
+    choice= input("Enter your choice : \n")
+    print(videos)
 
     match choice:
       case '1':
