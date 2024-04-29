@@ -3,7 +3,8 @@
 a= int(input("Enter 1st number :"))
 b= int(input("Enter 2nd number:"))
 
-if (a>b):
-  print ("1st number is greatest")
+if a>b:
+  print (f" {a} is greater than {b}")
+
 else:
-  print("2nd number is greatest")
+  print(f"{b} is greater than{a}")
