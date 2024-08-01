@@ -39,7 +39,7 @@ class CSV:
         end_date = datetime.strptime(end_date, CSV.FORMAT)
 
         mask = (df["date"] >= start_date) & (df["date"] <= end_date)
-        filtered_df = df.loc[mask]
+        filtered_df = df.loc[mask] #iloc is label based data selecting method in pandas
 
         if filtered_df.empty:
             print("No transactions found in the given date range.")
