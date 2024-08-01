@@ -1,26 +1,23 @@
-#file to collect data from the user,  validates the data, has input statement
-
-
 from datetime import datetime
 
 date_format = "%d-%m-%Y"
-CATEGORIES = {"I": "INCOME",
-              "E": "EXPENSE"
-              }
-
+CATEGORIES = {"I": "Income", "E": "Expense"}
 
 #IN THIS PROMPT WE ARE GOING TO ASK THE USER TO INPUT
 # BEFORE THEY GIVE US THE DATE, we can be getting date in diff places
 # allow default is going to tell us if we should have the default value of today's date
+
+
 def get_date(prompt, allow_default=False):
     date_str = input(prompt)
     if allow_default and not date_str:
         return datetime.today().strftime(date_format)
+
     try:
         valid_date = datetime.strptime(date_str, date_format)
-        return valid_date.strftime("date_format")
+        return valid_date.strftime(date_format)
     except ValueError:
-        print("Invalid date format. Please enter the date in dd-mm-yyyy format")
+        print("Invalid date frmat. Please enter the date in dd-mm-yyyy format")
         return get_date(prompt, allow_default)
 
 
@@ -39,9 +36,10 @@ def get_category():
     category = input("Enter the category ('I' for Income or 'E' for Expense): ").upper()
     if category in CATEGORIES:
         return CATEGORIES[category]
+
     print("Invalid category. Please enter 'I' for Income or 'E' for Expense.")
     return get_category()
 
 
 def get_description():
-    return input("Enter a description (optional):")
+    return input("Enter a description (optional): ")
