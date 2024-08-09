@@ -24,13 +24,18 @@
 
 
 
+#
+# def sort_even_odd(numbers):
+#
+#     even_count= []
+#     odd_count= []
+#
+#     evens = sorted([num for num in numbers if num % 2 == 0])
+#     odds = sorted([num for num in numbers if num % 2 != 0])
+#     return evens + odds
+# answer =sort_even_odd([5,30,10,11,35,3,20,60,93,99])
+# print(answer)
 
-def sort_even_odd(numbers):
-    evens = sorted([num for num in numbers if num % 2 == 0])
-    odds = sorted([num for num in numbers if num % 2 != 0])
-    return evens + odds
-
-print(sort_even_odd([5,10,11,35,20,60,93,99]))
 
 
 

@@ -6,4 +6,5 @@ if gender == "M":
   print ("Good Morning Sir")
 else:
     print ("Good Morning madam")
- 
+
+
