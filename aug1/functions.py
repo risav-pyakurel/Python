@@ -73,3 +73,36 @@
 #
 #
 # converter(2800)
+#
+# num = int(input("Enter the number: "))
+#
+#
+# def odd_even(num):
+#     if num % 2 == 0:
+#         print("This is even number")
+#     else:
+#         print("This is odd number")
+#
+#
+# odd_even(num)
+
+# def addItemToDictionary(itemName, quantity, itemList={}):
+#     itemList[itemName] = quantity
+#     return itemList
+#
+#
+# print(addItemToDictionary('notebook', 4))
+# print(addItemToDictionary('pencil', 1))
+# print(addItemToDictionary('eraser', 1))
+
+
+def greet(name):
+    return f" Hello,{name} "
+
+
+def welcoming(name):
+    message = greet(name=name)
+    return f" welcome to our cult, {message}"
+
+
+print(welcoming("risav"))
